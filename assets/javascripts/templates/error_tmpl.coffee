@@ -95,6 +95,7 @@ app.templates.offlineError = (reason, exception) ->
 
   error "Offline mode is unavailable.", reason
 
+
 app.templates.unsupportedBrowser =
   en: """
     <div class="_fail">
@@ -142,3 +143,25 @@ app.templates.unsupportedBrowser =
         &mdash; Thibaut <a href="https://twitter.com/DevDocs" class="_fail-link">@DevDocs</a>
     </div>
   """
+
+app.templates.unsupportedBrowser = """
+  <div class="_fail">
+    <h1 class="_fail-title">Your browser is unsupported, sorry.</h1>
+    <p class="_fail-text">DevDocs is an API documentation browser which supports the following browsers:
+    <ul class="_fail-list">
+      <li>Recent versions of Firefox, Chrome, or Opera
+      <li>Safari 9.1+
+      <li>Edge 16+
+      <li>iOS 10+
+    </ul>
+    <p class="_fail-text">
+      If you're unable to upgrade, we apologize.
+      We decided to prioritize speed and new features over support for older browsers.
+    <p class="_fail-text">
+      Note: if you're already using one of the browsers above, check your settings and add-ons.
+      The app uses feature detection, not user agent sniffing.
+    <p class="_fail-text">
+      &mdash; <a href="https://twitter.com/DevDocs">@DevDocs</a>
+  </div>
+"""
+
